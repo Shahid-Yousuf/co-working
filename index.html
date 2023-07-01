@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="#">Co-working</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Benefits</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <i class="uil uil-bars" id="menu-btn"></i>
+    </nav>
+
+    <!--Advertisement Banner-->
+    <header>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/02.jpg" alt="">
+                <div class="header-text">
+                    <h4>TECHNOLOGY</h4>
+                    <h1>Creative Space</h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat rerum tenetur sapiente minima excepturi nisi similique eos laborum perspiciatis natus!</h3>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/07.jpg" alt="">
+                <div class="header-text">
+                    <h4>FACILITIES</h4>
+                    <h1>Work Space</h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus at nisi labore dignissimos, aliquid magnam!</h3>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/10.jpg" alt="">
+                <div class="header-text">
+                    <h4>PROFESSIONAL</h4>
+                    <h1>Professional Working Environment</h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quasi vel corrupti id voluptatem excepturi eum porro!</h3>
+                    <a href="#" class="btn">Get Started</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 25000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+    </script>
+
+    <script>
+        const menu_btn = document.querySelector('#menu-btn');
+        const nav = document.querySelector('ul');
+        menu_btn.addEventListener('click',()=>{
+            nav.classList.toggle('nav-open')
+        })
+    </script>
+</body>
+</html>
